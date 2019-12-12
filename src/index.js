@@ -9,6 +9,7 @@ import PublicPage from './views/PublicPage'
 import PrivateRouteContainer from './containers/PrivateRoute/PrivateRoute.container'
 import './index.css'
 import PersonajesPage from './views/PersonajesPage'
+import CapitulosPage from './views/CapitulosPage'
 
 ReactDOM.render(
   <Provider store={store}>
@@ -17,6 +18,7 @@ ReactDOM.render(
         <Route exact path='/login' component={LoginPage} />
         <Route exact path='/public' component={PublicPage} />
         <Route exact path='/personajes' component={PersonajesPage} />
+        <Route exact path='/capitulos' component={CapitulosPage} />
         <PrivateRouteContainer exact path='/private' component={PrivatePage} />
         <Route exact path='/403' render={() => <div>403</div>} />
         <Route path='*' render={() => <div>404</div>} />
